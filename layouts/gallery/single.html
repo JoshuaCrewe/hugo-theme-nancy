@@ -1,0 +1,17 @@
+{{partial "header.html" .}}
+
+<div class="row">
+    <div class="column one-whole">
+        
+        <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+            {{ .Content }}
+
+        </div>
+
+    </div>
+</div>
+
+{{ partial "photoswipe.html" . }}
+
+{{partial "footer.html" .}}

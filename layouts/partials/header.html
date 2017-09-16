@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>
+            {{ if .IsHome }}
+                {{ .Site.Title }}
+            {{ else if .Params.heading }}
+                {{ .Params.heading }}
+            {{ else }}
+                {{ .Site.Title }} | {{ .Title }}
+            {{ end }}
+        </title>
+
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimal-ui" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}css/app.min.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    </head>
+
+    <body class="body">
+        <div class="container">
+
+            <header class="header">
+                <div class="row">
+
+                    <div class="column one-whole">
+
+                        <div class="float-left">
+                            <a href="/">
+                                <h1 class="logo gamma">Nancy Crewe</h1>
+                            </a>
+                        </div>
+
+                        <a href="#" class="hamburger js-subnav-trigger" data-subnav="mobile-menu">
+                            <span class="bars">Menu</span>
+                        </a>
+
+                        <nav class="nav">
+
+
+                            <ul class="nav--main">
+                                {{ range .Site.Menus.main }}
+                                    <li>
+                                        <a class="{{ .Identifier }}" href="{{ .URL }}">{{ .Name }}</a>
+                                    </li>
+                                {{ end }}
+                            </ul>
+
+                        </nav>
+
+                    </div>
+                </div>
+
+            </header>
+

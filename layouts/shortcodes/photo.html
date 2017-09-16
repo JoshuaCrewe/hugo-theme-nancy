@@ -1,0 +1,18 @@
+<figure class="gallery-item" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject"> 
+    <a 
+        href="{{ .Get "href"}}" 
+        itemprop="contentUrl" 
+        data-size="{{ .Get "largeDim"}}" 
+        data-medium-url="{{ .Get "smallUrl" }}" 
+        data-medium-size="{{ .Get "smallDim" }}"
+    > 
+        <img class="gallery-image" alt="{{ .Get "alt"}}" data-size="{{ .Get "thumbSize"}}" itemprop="thumbnail" src="{{ .Get "thumbUrl"}}">
+    </a>
+
+    <figcaption itemprop="caption description" class="hide">
+        {{ .Get "caption"}}
+    </figcaption>
+
+    <!-- Check to see if the item has a tag of sold -->
+    <i class="fa fa-circle red sold"></i>
+</figure>
