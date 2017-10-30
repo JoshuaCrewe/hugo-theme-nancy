@@ -1,0 +1,39 @@
+.gallery {
+    width: 100%;
+    padding: .5vw;
+}
+
+.gallery-item {
+    width: 20%;
+    float: left;
+    padding: .5rem;
+    transition: $transition;
+    margin-bottom: 0;
+    text-align: center;
+
+    &:hover {
+        opacity: .6;
+    }
+
+    @media (max-width: 800px) {
+        width: 33.333%;
+    }
+
+    @media (max-width: 600px) {
+        width: 50%;
+    }
+
+    @media (max-width: 400px) {
+        width: 100%;
+    }
+}
+
+.gallery-item .gallery-image {
+    margin-bottom: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery-image-meta {
+    padding: .5rem;
+}
