@@ -1,0 +1,32 @@
+{
+    "gulp": {
+        "styles": [{
+            "name": "app",
+            "src": "static/src/sass/app.scss",
+            "dest": "static/css"
+        }],
+        "scripts": [{
+            "name": "app",
+            "src": "static/src/js/app.js",
+            "dest": "static/js"
+        }],
+        "images": {
+            "src": "static/src/img/**/*",
+            "dest": "static/img"
+        },
+        "svg": {
+            "src": "static/src/svg/**/*.svg",
+            "dest": "static/svg"
+        },
+        "tests": {
+            "jsFiles": "static/src/js/**/*.js",
+            "scssFiles": "static/src/sass/**/*.scss"
+        },
+        "watch": {
+            "static/src/sass/**/*.scss" : ["styles"],
+            "static/src/js/**/*.js": ["scripts"],
+            "static/src/svg/**/*.svg": ["svg"],
+            "static/src/img/**/*.jpg": ["images"]
+        }
+    }
+}
