@@ -4,7 +4,8 @@
 
         <div class="column one-whole">
 
-            <div class="hero" style="background-image: url('img/home-img.jpg');"> </div>
+            {{ with .Site.GetPage "page" "gallery/paintings.md" }}{{ .Content }}{{ end }}
+            <!-- <div class="hero" style="background&#45;image: url('img/home&#45;img.jpg');"> </div> -->
 
         </div>
 
