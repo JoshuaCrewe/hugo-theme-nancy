@@ -100,7 +100,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     // parse picture index and gallery index from URL (#&pid=1&gid=2)
     var photoswipeParseHash = function() {
         var hash = window.location.hash.substring(1),
-        params = {};
+            params = {};
 
         if(hash.length < 5) {
             return params;
@@ -139,6 +139,11 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             // define gallery index (for URL)
             galleryUID: galleryElement.getAttribute('data-pswp-uid'),
             showHideOpacity:true,
+            shareButtons: [
+                {id:'facebook', label:'Share on Facebook', url:'https://www.facebook.com/sharer/sharer.php?u={{url}}'},
+                {id:'twitter', label:'Tweet', url:'https://twitter.com/intent/tweet?text={{text}}&url={{url}}'},
+                {id:'pinterest', label:'Pin it', url:'http://www.pinterest.com/pin/create/button/?url={{url}}&media={{image_url}}&description={{text}}'},
+            ],
 
             getThumbBoundsFn: function(index) {
                 // See Options -> getThumbBoundsFn section of documentation for more info
