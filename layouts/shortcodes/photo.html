@@ -13,6 +13,9 @@
         {{ .Get "caption"}}
     </figcaption>
 
-    <!-- Check to see if the item has a tag of sold -->
-    <i class="fa fa-circle red sold"></i>
+    {{ if in .Params.caption "SOLD" }}
+        <!-- Check to see if the item has a tag of sold -->
+        <i class="fa fa-circle red sold"></i>
+    {{ end }}
+    
 </figure>
