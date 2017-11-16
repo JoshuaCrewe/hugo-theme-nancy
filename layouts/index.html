@@ -1,3 +1,18 @@
 {{partial "header.html" .}}
-{{partial "home.html" .}}
+
+<div class="row">
+    <div class="column one-whole">
+        
+        <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+            {{ with .Site.GetPage "page" "gallery/paintings.md" }}{{ .Content }}{{ end }}
+
+        </div>
+
+    </div>
+</div>
+
+{{ partial "photoswipe.html" . }}
+
 {{partial "footer.html" .}}
+
