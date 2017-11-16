@@ -1,6 +1,9 @@
 // This is the shame file. If you put anything in here it needs some documentation with it.
 .sold {
-    transform: scale(.5);
+    transform: scale(.5) translateX(-50%);
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
 }
 
 .sold.hidden {
