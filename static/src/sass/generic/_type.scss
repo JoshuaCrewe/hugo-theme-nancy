@@ -63,14 +63,20 @@ p {
     @extend .olive;
     @extend .border--olive;
     border-bottom: 1px solid;
+    transition: all .3s ease;
+}
+
+.link:hover {
+    @extend .teal;
+    @extend .border--teal;
 }
 
 .content {
-    width: 95%;
+    width: 50%;
     margin: 0 auto;
 
     @media(max-width: 1280px) {
-        width: 85%;
+        width: 66%;
     }
 
     @media (max-width: 800px) {
@@ -100,6 +106,10 @@ p {
 .content img {
     max-width: 100%;
     height: auto;
+}
+
+.content a {
+    @extend .link;
 }
 
 
