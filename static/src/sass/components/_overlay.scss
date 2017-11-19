@@ -18,12 +18,67 @@
 
 .overlay-close {
     position: absolute ;
-    right: rhythm(2);
-    top: ryhthm(2);
-    height: rhythm(4);
-    width: rhythm(4);
+    right: rhythm(0);
+    top: rhythm(0);
+    height: 44px;
+    width: 44px;
+    // color: $black;
+    // font-size: 1.5rem;
+
     color: $black;
-    font-size: 1.5rem;
+    float: right;
+    width: 3rem;
+    height: 3rem;
+    transition: left .3s ease .3s, border .3s ease 0s;
+    transition-delay: .1s;
+    position: relative;
+    border-color: transparent;
+    transition: left .3s ease, border .3s ease .3s;
+
+}
+
+.overlay-close .bars {
+    background-color: transparent;
+}
+
+.overlay-close .bars::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.overlay-close .bars::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.bars {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bars,
+.bars::before,
+.bars::after {
+    display: block;
+    cursor: pointer;
+    height: 3px;
+    width: 1.5rem;
+    border-radius: 1rem;
+    background-color: $black;
+    position: absolute;
+    color: transparent;
+    transition: all .3s ease;
+}
+
+.bars::before {
+    content: '';
+    top: 8px;
+}
+
+.bars::after {
+    content: '';
+    top: -8px;
 }
 
 .overlay-content {

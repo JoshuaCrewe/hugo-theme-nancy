@@ -20,4 +20,4 @@ gulp.task('media', ['images', 'svg']);
 // server our app
 gulp.task('serve', ['build', 'server']);
 // default task
-gulp.task('default', ['build', 'media', 'server', 'watch']);
+gulp.task('default', ['build', 'media', 'watch']);
