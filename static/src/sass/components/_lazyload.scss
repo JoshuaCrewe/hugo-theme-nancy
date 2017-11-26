@@ -1,0 +1,31 @@
+.lazy {
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.lazy-container {
+    position: relative;
+    display: inline-block;
+    background-color: #f8f8f8;
+    line-height: 0;
+    animation: lazy 4s infinite;
+}
+
+.lazy.loaded {
+    opacity: 1;
+    transition: opacity .3s ease;
+    display: inline-block;
+}
+
+@keyframes lazy {
+    0% {
+        background-color: #fcfcfc;
+    }
+     50% {
+        background-color: #f8f8f8;
+     }
+     100% {
+        background-color: #fcfcfc;
+     }
+
+}
